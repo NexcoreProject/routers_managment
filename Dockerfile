@@ -28,6 +28,7 @@ COPY . .
 
 # si en settings.py tienes STATIC_ROOT = BASE_DIR / "static"
 # recoger staticfiles (ejecutar como root para poder escribir)
+WORKDIR /app/core
 RUN python manage.py collectstatic --no-input
 
 # crear carpeta y dar permisos a appuser
